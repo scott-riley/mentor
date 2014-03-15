@@ -3,11 +3,11 @@ var mentor = mentor || {},
     maxCharacters = 140;
 
 $(function(){
-  console.log('Uname: ' + session.username);
+
   var appRoute = new mentor.Router($('#content'));
   Backbone.history.start();
-  console.log('Advice: ' + sessionStorage.getItem("advice"));
 
+  console.log('Uname: ' + session.username);
   $('.submit-modal textarea').hide();
   $('[data-hide-on-load]').hide();
 
