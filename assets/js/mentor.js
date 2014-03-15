@@ -7,7 +7,7 @@ $(function(){
   var appRoute = new mentor.Router($('#content'));
   Backbone.history.start();
 
-  console.log('Uname: ' + session.username);
+  // console.log('Uname: ' + session.username);
   $('.submit-modal textarea').hide();
   $('[data-hide-on-load]').hide();
 
