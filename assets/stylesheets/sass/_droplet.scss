@@ -1,0 +1,68 @@
+.droplet {
+  @extend .container;
+  text-align: center;
+  overflow: auto;
+  display: table;
+  background: #FFF;
+  > div {
+    @media(min-width: 720px) {
+      display: table-cell;
+      vertical-align: middle;
+      height: 333px;
+    }
+  }
+  h1 {
+    @extend .full-grid;
+    font-weight: normal;
+    font-size: 1.6em;
+    @media(min-width: 720px) {
+      font-size: 2.8em;
+    }
+    color: #b569a6;
+    margin: 1em auto .6em;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern=1";
+  }
+
+  .info {
+    @extend .full-grid;
+    @media(min-width: 720px) {
+      font-size: 1.3em;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      display: inline-block;
+      list-style: none;
+      color: lighten(black,50);
+      position: relative;
+      margin-bottom: 1em;
+      @media(min-width: 720px) {
+        margin-bottom: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      &.last-child {
+        margin-right: 0;
+      }
+      &.with-icon {
+        padding-left: 1.4em;
+        span {
+          display: inline-block;
+          position: absolute;
+          width: 1.4em;
+          height: 1.4em;
+          top: 0.2em;
+          left: 0;
+        }
+      }
+    }
+  }
+
+}

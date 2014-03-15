@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+*
+* Upload this file to your web server
+* and place this within your <head> tags.
+* <link href="webfonts/ss-social.css" rel="stylesheet" />
+*/
+
+@font-face {
+  font-family: "SSSocial";
+  src: url('../../webfonts/ss-social-circle.eot');
+  src: url('../../webfonts/ss-social-circle.eot?#iefix') format('embedded-opentype'),
+       url('../../webfonts/ss-social-circle.woff') format('woff'),
+       url('../../webfonts/ss-social-circle.ttf') format('truetype'),
+       url('../../webfonts/ss-social-circle.svg#SSSocialCircle') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SSSocial";
+  src: url('../../webfonts/ss-social-regular.eot');
+  src: url('../../webfonts/ss-social-regular.eot?#iefix') format('embedded-opentype'),
+       url('../../webfonts/ss-social-regular.woff') format('woff'),
+       url('../../webfonts/ss-social-regular.ttf') format('truetype'),
+       url('../../webfonts/ss-social-regular.svg#SSSocialRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-style: normal;
+}
+
+/* This triggers a redraw in IE to Fix IE8's :before content rendering. */
+html:hover [class^="ss-social"]{-ms-zoom: 1;}
+
+.ss-icon.ss-social, .ss-icon.ss-social-circle,
+[class^="ss-social"]:before, [class*=" ss-social"]:before,
+[class^="ss-social"][class*=" ss-social"]:before, [class*=" ss-"][class*=" ss-social"]:before,
+[class^="ss-social"].right:after, [class*=" ss-social"].right:after,
+[class^="ss-social"][class*=" ss-social"].right:after, [class*=" ss-social"][class*=" ss-social"].right:after{
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.ss-icon.ss-social-circle,
+[class^="ss-social"].ss-social-circle:before, [class*=" ss-social"].ss-social-circle:before,
+[class^="ss-social"].ss-social-circle.right:after, [class*=" ss-social"].ss-social-circle.right:after{
+  font-weight: bold;
+}
+
+[class^="ss-"].right:before,
+[class*=" ss-social"].right:before{display:none;content:'';}
+
+.ss-social-facebook:before,.ss-social-facebook.right:after{content:''}.ss-social-twitter:before,.ss-social-twitter.right:after{content:''}.ss-social-linkedin:before,.ss-social-linkedin.right:after{content:''}.ss-social-googleplus:before,.ss-social-googleplus.right:after{content:''}.ss-social-tumblr:before,.ss-social-tumblr.right:after{content:''}.ss-social-wordpress:before,.ss-social-wordpress.right:after{content:''}.ss-social-blogger:before,.ss-social-blogger.right:after{content:''}.ss-social-posterous:before,.ss-social-posterous.right:after{content:''}.ss-social-youtube:before,.ss-social-youtube.right:after{content:''}.ss-social-vimeo:before,.ss-social-vimeo.right:after{content:''}.ss-social-flickr:before,.ss-social-flickr.right:after{content:''}.ss-social-instagram:before,.ss-social-instagram.right:after{content:''}.ss-social-pinterest:before,.ss-social-pinterest.right:after{content:''}.ss-social-svpply:before,.ss-social-svpply.right:after{content:''}.ss-social-readmill:before,.ss-social-readmill.right:after{content:''}.ss-social-dropbox:before,.ss-social-dropbox.right:after{content:''}.ss-social-dribbble:before,.ss-social-dribbble.right:after{content:''}.ss-social-behance:before,.ss-social-behance.right:after{content:''}.ss-social-github:before,.ss-social-github.right:after{content:''}.ss-social-octocat:before,.ss-social-octocat.right:after{content:''}.ss-social-stackoverflow:before,.ss-social-stackoverflow.right:after{content:''}.ss-social-paypal:before,.ss-social-paypal.right:after{content:''}.ss-social-kickstarter:before,.ss-social-kickstarter.right:after{content:''}.ss-social-foursquare:before,.ss-social-foursquare.right:after{content:''}.ss-social-skype:before,.ss-social-skype.right:after{content:''}.ss-social-rdio:before,.ss-social-rdio.right:after{content:''}.ss-social-spotify:before,.ss-social-spotify.right:after{content:''}.ss-social-lastfm:before,.ss-social-lastfm.right:after{content:''}.ss-social-mail:before,.ss-social-mail.right:after{content:'✉'}.ss-social-like:before,.ss-social-like.right:after{content:'👍'}.ss-social-rss:before,.ss-social-rss.right:after{content:''}

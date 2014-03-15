@@ -1,0 +1,125 @@
+@-webkit-keyframes rotate {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotate {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.button {
+  display: inline-block;
+  padding: .4em 1em;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: $color-secondary;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 1.2em;
+  position: relative;
+  span {
+    display: none;
+    @media(min-width:640px) {
+      display: inline;
+    }
+  }
+  &.with-icon {
+    padding-left: 2.1em;
+  }
+  i {
+    -webkit-transform-origin: 50% 30%;
+            transform-origin: 50% 30%;
+    display: inline-block;
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    top: 0.55em;
+    left: 0.6em;
+  }
+  &:hover {
+    color: rgba(white,.8);
+  }
+}
+
+.button__primary {
+  background: #464368;
+  @media(min-width: 720px) {
+    font-size: 1.8em;
+  }
+  color: lighten(#464368, 40);
+  &:hover {
+    background: lighten($color-primary, 10);
+    color: lighten(#464368, 40);
+  }
+  &.with-icon {
+    padding-left: 2.3em;
+  }
+}
+
+.disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  &:hover {
+    background: #464368;
+  }
+}
+
+.processing {
+  @extend .disabled;
+  cursor: default;
+  i {
+    -webkit-animation: rotate 1s linear infinite;
+  }
+}
+
+.done {
+
+}
+
+.submit {
+  font-size: 1.2em;
+}
+
+.button__twitter {
+  background: rgba(#4099FF,.8);
+  color: lighten(#4099FF, 30);
+  &:hover {
+    background: rgba(#4099FF,.9);
+    color: lighten(#4099FF, 30);
+  }
+}
+
+.buttons {
+  text-align: center;
+  padding-top: 1.4em;
+  span {
+    font-size: 1.2em;
+    color: lighten(black, 40);
+    font-style: italic;
+  }
+  .button {
+    margin-right: 0.4em;
+    &:last-child {
+      margin-right: 0;
+      margin-left: 0.4em;
+    }
+  }
+}

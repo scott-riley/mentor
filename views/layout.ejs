@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title> M E N T O R – Droplets of advice for those new to the web industry.</title>
+    <link rel="stylesheet" href="/stylesheets/css/screen.css">
+    <link rel="shortcut icon" href="/favicon.ico?v=2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+
+    <header class="main-header">
+        <nav class="top-nav">
+            <a class="logo" href="/"><i class="ss-droplet"></i> Mentor</a>
+            <a href="#" class="button button___secondary with-icon" data-toggle=".modal, .modal-overlay" data-toggle-body="show-modal" data-toggle-method="fade"><i class="ss-emptyheart"></i> Share <span>your advice</span></a>
+        </nav>
+    </header>
+
+    <%- body %>
+
+    <section class="submit-modal modal" data-hide-on-load="true">
+        <header class="modal-header">
+            <h1>Submit your advice</h1>
+            <a href="#" class="close ss-delete" data-close=".modal" data-toggle=".modal, .modal-overlay" data-toggle-body="show-modal" data-toggle-method="fade">
+            </a>
+        </header>
+        <form action="#" id="advice-form">
+            <label for="advice">
+                Your advice (maximum 140 characters)
+                <span class="max-chars">140</span>
+            </label>
+            <div class="advice-replacer" id="advice-replacer" contenteditable="true" spellcheck="true"></div>
+            <textarea name="content" id="your-advice"></textarea>
+            <% if(session.username) { %>
+              <p class="affection">with <i class="ss-emptyheart"></i> from <span class="twitter-user"><%= session.username %></span></p>
+            <% } %>
+            <div class="buttons">
+                <% if(!session.username) { %>
+                    <a href="auth/twitter" class="button button__twitter twitter with-icon">
+                        <i class="ss-social-twitter"></i> Sign in with Twitter
+                    </a>
+                    <span>or</span>
+                    <a href="#" class="button button__primary submit with-icon disabled">
+                        <i class="ss-emptyheart"></i> Share the love Anonymously
+                    </a>
+                <% } else { %>
+                    <a href="#" class="button button__primary submit with-icon disabled">
+                        <i class="ss-emptyheart"></i> Share the love
+                    </a>
+                <% } %>
+            </div>
+        </form>
+    </section>
+
+    <footer class="main-footer">
+        <p>
+            <a href="" class="logo logo__small"><span class="ss-droplet"></span> MENTOR</a> &ndash; Droplets of advice for those new to the web industry, with <span class="ss-emptyheart"></span> from wonderful people.
+            <span class="credit">
+                Made by <a href="http://scottrileydesigns.co.uk">Scott Riley</a>
+                <a href="http://twitter.com/scott_riley" class="ss-social-twitter"></a>
+                <a href="https://github.com/scott-riley/mentor" class="ss-social-octocat"></a>
+            </span>
+        </p>
+    </footer>
+    <div class="modal-overlay" data-hide-on-load="true"></div>
+
+    <!-- {{#if isAuth}}
+        <script type="text/javascript">var socialUser = {{{user}}}; </script>
+    {{/if}} -->
+    <script type="text/javascript" src="/js/jq.js"></script>
+    <script type="text/javascript" src="/js/vendor/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="/js/vendor/backbone/backbone-min.js"></script>
+    <script type="text/javascript" src="/js/vendor/handlebars/dist/handlebars.min.js"></script>
+    <script type="text/javascript" src="/js/lib/models/DropletModel.js"></script>
+    <script type="text/javascript" src="/js/lib/views/DropletView.js"></script>
+    <script type="text/javascript" src="/js/lib/collections/DropletCollection.js"></script>
+    <script type="text/javascript" src="/js/lib/views/DropletRandomView.js"></script>
+    <script type="text/javascript" src="/js/lib/routes/routes.js"></script>
+    <script type="text/javascript" src="/js/mentor.js"></script>
+    <!--
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/socket.io.js"></script>
+    <script type="text/javascript" src="/js/sails.io.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+    -->
+    <script type="text/javascript" src="//use.typekit.net/hxe8avo.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </body>
+</html>
