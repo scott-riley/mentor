@@ -17,6 +17,8 @@
 
 var MorselController = {
   get: function (req, res) {
+    // if req.param('id') is null or undefined, we
+    // just get all records
     Morsel.find(req.param('id'))
       .sort('user')
       .exec(function (err, morsels) {
@@ -40,6 +42,7 @@ var MorselController = {
         });
     }
     else {
+      // User is unauthorised
       return res.send(401);
     }
   }
