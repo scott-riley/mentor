@@ -20,9 +20,9 @@ var MorselController = {
     Morsel.find(req.param('id'))
       .sort('user')
       .exec(function (err, morsels) {
-        if (err) return req.send(500, err);
+        if (err) { return req.send(500, err); }
 
-        res.json(morsels);
+        return res.json(morsels);
       });
   },
   post: function (req, res) {
@@ -34,13 +34,13 @@ var MorselController = {
       Morsel.create(req.body)
         .done(function (err, morsel) {
           // just return error to the client
-          if (err) return req.send(500, err);
+          if (err) { return req.send(500, err); }
 
-          res.json(morsel);
+          return res.json(morsel);
         });
     }
     else {
-      res.send(401);
+      return res.send(401);
     }
   }
 };
