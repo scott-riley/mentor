@@ -16,20 +16,36 @@
  */
 
 var MorselController = {
-  random: function(req,res) {
-    Morsel.find({sort: 'content ASC'}).done(function(err,morsel){
-      if (err) return res.send(err,500);
-      var morselCount = morsel.length;
-      if(morselCount) {
-        var rand = Math.floor(Math.random() * 10);
-        /** TODO: Refactor this to not be a fucking loop you mong **/
-        while(rand > morselCount || rand == 0) {
-          rand = Math.floor(Math.random() * 10);
-        }
-        res.send('morsel[rand - 1]');
-        }
-    });
+  get: function (req, res) {
+    // if req.param('id') is null or undefined, we
+    // just get all records
+    Morsel.find(req.param('id'))
+      .sort('user')
+      .exec(function (err, morsels) {
+        if (err) { return res.send(500, err); }
+
+        return res.json(morsels);
+      });
+  },
+  post: function (req, res) {
+    // this tells us if we're authenticated
+    if (req.session.username) {
+      // bind username to incoming request
+      req.body.user = req.session.username;
+
+      Morsel.create(req.body)
+        .done(function (err, morsel) {
+          // just return error to the client
+          if (err) { return res.send(500, err); }
+
+          return res.json(morsel);
+        });
+    }
+    else {
+      // User is unauthorised
+      return res.send(401);
+    }
   }
-}
+};
 
 module.exports = MorselController;
