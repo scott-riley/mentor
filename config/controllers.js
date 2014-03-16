@@ -82,7 +82,7 @@ module.exports.controllers = {
      *
      * `rest` blueprints are enabled by default, and suitable for a production scenario.
      */
-    rest: true,
+    rest: false,
 
 
     /**
