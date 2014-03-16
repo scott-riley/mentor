@@ -97,10 +97,9 @@ $(function(){
                                .prepend('<i class="ss-emptyheart"></i>');
       var newDroplet = new mentor.Droplet();
       var dropletContent = $('#advice-replacer').text();
-      var dropletAuthor = $('.twitter-user').text();
+
       newDroplet.save({
-        content: dropletContent,
-        user: dropletAuthor
+        content: dropletContent
       }, {
         success: function(model, response) {
           window.setTimeout(
@@ -118,8 +117,8 @@ $(function(){
           window.setTimeout(
             function(){
               $('.droplet h1').text(dropletContent);
-              $('.details a').text(dropletAuthor + ' (thanks!)');
-              $('.details a').attr('href', 'http://twitter.com/' + dropletAuthor);
+              $('.details a').text(response.user + ' (thanks!)');
+              $('.details a').attr('href', 'http://twitter.com/' + response.user);
               sessionStorage.removeItem('advice');
               $('.modal .close').click();
             },
