@@ -7,13 +7,14 @@
  */
 
 module.exports = {
-
   attributes: {
-  	
-  	/* e.g.
-  	nickname: 'string'
-  	*/
-    
+    user: {
+      type: 'string',
+      required: true,
+    },
+    content: {
+      type: 'string',
+      maxLength: 140
+    }
   }
-
 };
