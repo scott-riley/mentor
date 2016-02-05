@@ -5,6 +5,7 @@
   "description": "Morsels of fun from quims",
   "dependencies": {
     "sails": "0.9.7",
+    "express": "3.4.0",
     "grunt": "0.4.1",
     "sails-disk": "~0.9.0",
     "ejs": "0.8.4",
@@ -12,7 +13,7 @@
     "backbone-validation":"0.9.1",
     "sails-mongo": "0.9.6",
     "passport-twitter": "~0.1.5",
-    "passport": "~0.1.17"
+    "passport": "~0.1.17",
   },
   "scripts": {
     "start": "node app.js",
