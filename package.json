@@ -5,6 +5,7 @@
   "description": "Morsels of fun from quims",
   "dependencies": {
     "backbone-validation": "0.9.1",
+    "cookie": "^0.2.3",
     "ejs": "0.8.4",
     "grunt": "0.4.1",
     "optimist": "0.3.4",
