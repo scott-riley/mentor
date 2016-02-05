@@ -13,7 +13,7 @@
     "backbone-validation":"0.9.1",
     "sails-mongo": "0.9.6",
     "passport-twitter": "~0.1.5",
-    "passport": "~0.1.17",
+    "passport": "~0.1.17"
   },
   "scripts": {
     "start": "node app.js",
