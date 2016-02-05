@@ -5,14 +5,12 @@
   "description": "Morsels of fun from quims",
   "dependencies": {
     "backbone-validation": "0.9.1",
-    "connect": "^3.4.1",
     "ejs": "0.8.4",
-    "express": "3.4.0",
     "grunt": "0.4.1",
     "optimist": "0.3.4",
     "passport": "~0.1.17",
     "passport-twitter": "~0.1.5",
-    "sails": "0.9.7",
+    "sails": "0.10.0",
     "sails-disk": "~0.9.0",
     "sails-mongo": "0.9.6"
   },
