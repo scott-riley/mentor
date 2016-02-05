@@ -1,0 +1,36 @@
+{
+  "name": "mentor",
+  "scripts": {
+  },
+  "env": {
+    "DUMM_VAR": {
+      "required": true
+    },
+    "MONGO_URL": {
+      "required": true
+    },
+    "SESSION_SECRET": {
+      "required": true
+    },
+    "TWITTER_CALLBACK": {
+      "required": true
+    },
+    "TWITTER_CONSUMER_KEY": {
+      "required": true
+    },
+    "TWITTER_CONSUMER_SECRET": {
+      "required": true
+    }
+  },
+  "addons": [
+    "newrelic",
+    "mongolab",
+    "blitz",
+    "papertrail"
+  ],
+  "buildpacks": [
+    {
+      "url": "urn:buildpack:heroku/nodejs"
+    }
+  ]
+}
