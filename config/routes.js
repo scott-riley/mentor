@@ -40,7 +40,8 @@ module.exports.routes = {
 
   'get /morsel/:id?': {
     controller: 'morsel',
-    action: 'get'
+    action: 'get',
+    view: 'home/index'
   },
 
   'post /morsel': {
